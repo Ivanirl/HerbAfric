@@ -1,0 +1,57 @@
+# Node modules and build artifacts
+node_modules
+.buckd
+.expo
+.expo-shared
+dist
+build
+ios/build
+android/app/build
+android/.gradle
+android/.idea
+.gradle
+.web
+
+# System & IDE junk
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+*.log
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.keystore
+*.jks
+*.p12
+
+# Version control
+.git
+.gitignore
+gitattributes
+
+# Archives and temp files
+*.tar.gz
+*.zip
+*.tmp
+*.swp
+*.bak
+
+# macOS/Linux/Windows-specific cache or system folders
+__MACOSX
+*.Trash
+.sass-cache
+.cache
+npm-debug.log
+yarn-error.log
+
+# Windows specific folders that may cause EPERM errors
+AppData/
+**/ElevatedDiagnostics
+C:\Users\User\AppData\Local\ElevatedDiagnostics
+
+# Expo and EAS metadata that shouldn't be uploaded
+eas.json
+expo.dev.json

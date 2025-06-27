@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "HerbAfric",
+    "slug": "HerbAfric",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/adaptive-icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ivanirl.HerbAfric"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7ebc7623-e4f9-419d-b3d1-d290fb676a73"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/7ebc7623-e4f9-419d-b3d1-d290fb676a73",
+      "requestHeaders": {
+        "expo-channel-name": "new-channel"
+      }
+    },
+    "owner": "ivanirl"
+  }
+}
