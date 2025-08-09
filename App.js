@@ -115,8 +115,8 @@ function HomeScreen() {
               />
               <Text style={styles.backButtonTextWhite}>Back to welcome</Text>
             </TouchableOpacity>
-
             <FlatList
+              style={{ flex: 1 }}
               data={searchQuery ? filteredDiseases : diseaseData}
               keyExtractor={(item, index) => index.toString()}
               numColumns={2}
@@ -146,7 +146,7 @@ function HomeScreen() {
                       {item.symptoms_and_signs}
                     </Text>
                     <Text style={styles.herbsCountWhite}>
-                      {item.herbs?.length || 0}{" "}
+                      {item.herbs?.length ?? 0}{" "}
                       {item.herbs?.length === 1 ? "remedy" : "remedies"}
                     </Text>
                   </View>
@@ -773,6 +773,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
     margin: CARD_MARGIN / 2,
+    height: 220,
     elevation: 3,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -782,23 +783,25 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: "100%",
-    height: "40%",
+    height: 100,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
   cardContent: {
     flex: 1,
-    padding: 12,
+    padding: 8,
     justifyContent: "space-between",
   },
   cardTitleWhite: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
     color: "white",
-    marginBottom: 5,
+    marginBottom: 4,
   },
   cardSystemWhite: {
     fontSize: 12,
     color: "rgba(255, 255, 255, 0.8)",
-    marginBottom: 8,
+    marginBottom: 4,
     fontStyle: "italic",
   },
   cardSymptomsWhite: {
@@ -956,6 +959,7 @@ const styles = StyleSheet.create({
   gridContainer: {
     paddingBottom: 20,
     paddingTop: 25,
+    flexGrow: 1,
   },
   oops: {
     position: "absolute",
@@ -1018,6 +1022,8 @@ const styles = StyleSheet.create({
     fontWeight: `bold`,
     marginTop: 30,
     marginBottom: 5,
+    textAlign: `left`,
+    justifyContent: `left`,
   },
   bullet: {
     color: "white",
