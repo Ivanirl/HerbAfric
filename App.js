@@ -14,6 +14,7 @@ import {
   ActivityIndicator,
   StatusBar,
   Keyboard,
+  Linking,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -207,6 +208,22 @@ function HomeScreen() {
                 <Text style={styles.instructionTextWhite}>
                   Discover traditional preparations and native names for each
                   herb
+                </Text>
+              </View>
+              <View style={styles.instructionSection}>
+                <MaterialCommunityIcons name="leaf" size={24} color="green" />
+                <Text style={styles.instructionTextWhite}>
+                  Information about the diseases and herbal remedies are sourced
+                  from the 
+                  <Text
+                    style={{ color: "blue" }}
+                    onPress={() =>
+                      Linking.openURL("https://dibanduherbals.com/")
+                    }
+                  >
+                   ; Dibandu herbals
+                    website.
+                  </Text>
                 </Text>
               </View>
             </View>
